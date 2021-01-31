@@ -18,9 +18,9 @@ public class Orb : MonoBehaviour
     Ability mCrrtAbility;
     public Ability crrtAbility
     {
-        get 
-        { 
-            return mCrrtAbility; 
+        get
+        {
+            return mCrrtAbility;
         }
         set
         {
@@ -29,12 +29,30 @@ public class Orb : MonoBehaviour
             Debug.Log(value);
         }
     }
+    bool mIsOrbTouched = false;
+    public bool isOrbTouched
+    {
+        get
+        {
+            return mIsOrbTouched;
+        }
+        set
+        {
+            if (!mIsOrbTouched && value)
+            {
+                doorManager.notifyOrbTouched();
+            }
+            mIsOrbTouched = value;
+        }
+    }
 
     [Header("Components")]
     public SpriteRenderer spriteRenderer;
+    public DoorManager doorManager;
 
-    private void Start() 
+    private void Start()
     {
+        doorManager.registerOrb();
         crrtAbility = initialAbility;
     }
 
@@ -43,6 +61,7 @@ public class Orb : MonoBehaviour
         Player player = other.gameObject.GetComponent<Player>();
         if (player != null)
         {
+            isOrbTouched = true;
             crrtAbility = player.SwapAbility(crrtAbility);
         }
     }
