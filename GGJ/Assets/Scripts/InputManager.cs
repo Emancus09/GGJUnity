@@ -36,6 +36,10 @@ public class InputManager : MonoBehaviour
         SetActiveAbility(Ability.Right, Input.GetButton("Right"));
     }
 
+    public bool[] getAllAbilitiesAvail(){
+        return mAvailableAbilities;
+    }
+
     bool GetAbility(Ability ability)
     {
         int index = (int) ability;
