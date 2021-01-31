@@ -16,6 +16,7 @@ public class Orb : MonoBehaviour
     [Header("Mechanics")]
     public Ability initialAbility = Ability.NULL;
     Ability mCrrtAbility;
+
     public Ability crrtAbility
     {
         get 

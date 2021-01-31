@@ -14,6 +14,11 @@ public class Player : MonoBehaviour
     public InputManager input;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
+    public AudioSource audio;
+
+    [Header("Audio")]
+    public AudioClip jumpSFX;
+    public AudioClip swapSFX;
 
     void Update()
     {
@@ -41,6 +46,7 @@ public class Player : MonoBehaviour
 
     public void Jump()
     {
+        audio.PlayOneShot(jumpSFX);
         Vector2 newVelocity = rb.velocity;
         newVelocity += Vector2.up * jumpSpeed;
         rb.velocity = newVelocity;
@@ -48,6 +54,7 @@ public class Player : MonoBehaviour
 
     public Ability SwapAbility(Ability ability)
     {
+        audio.PlayOneShot(swapSFX);
         input.EnableAbility(ability);
         return input.ConsumeLastAbility();
     }
