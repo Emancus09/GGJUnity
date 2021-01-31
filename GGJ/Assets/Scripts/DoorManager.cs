@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorManager : MonoBehaviour
 {
+    public string nextScene;
+
     int mNumRegisteredOrbs = 0;
     int mNumOrbsTouched = 0;
 
@@ -49,7 +52,7 @@ public class DoorManager : MonoBehaviour
         Debug.Log("can't proceed - door is locked");
         if (player != null && !isLocked)
         {
-            Debug.Log("advance to next level");
+            SceneManager.LoadScene(nextScene);
         }
     }
 }

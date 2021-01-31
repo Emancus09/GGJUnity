@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     public Sprite[] greyArrows;
     public Sprite[] colorArrows;
-    public GameObject[] currentArrows;
+    public Image[] currentArrows;
 
     public InputManager mInputMgr;
 
@@ -20,11 +21,11 @@ public class UIManager : MonoBehaviour
         bool[] abilities = mInputMgr.getAllAbilitiesAvail();
         for (int i = 0; i < currentArrows.Length; i++){
             if (abilities[i]){
-                currentArrows[i].GetComponent<SpriteRenderer>().sprite = 
+                currentArrows[i].sprite = 
                     colorArrows[i];
             }
             else {
-                currentArrows[i].GetComponent<SpriteRenderer>().sprite = 
+                currentArrows[i].sprite = 
                     greyArrows[i];
             }
         }
