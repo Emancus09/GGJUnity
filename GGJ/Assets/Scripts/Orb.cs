@@ -2,12 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "ScriptableObjects/OrbData")]
-public class OrbData : ScriptableObject
-{
-    public Sprite[] orbSprites;
-}
-
 public class Orb : MonoBehaviour
 {
     [Header("General")]
@@ -27,7 +21,6 @@ public class Orb : MonoBehaviour
         {
             mCrrtAbility = value;
             spriteRenderer.sprite = data.orbSprites[(int)mCrrtAbility];
-            Debug.Log(value);
         }
     }
     bool mIsOrbTouched = false;

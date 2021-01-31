@@ -20,6 +20,11 @@ public class Player : MonoBehaviour
     public AudioClip jumpSFX;
     public AudioClip swapSFX;
 
+    private void Start()
+    {
+        audio = GameObject.Find("Music").GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         // Check grounded

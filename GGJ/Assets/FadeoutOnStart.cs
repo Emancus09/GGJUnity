@@ -21,7 +21,6 @@ public class FadeoutOnStart : MonoBehaviour
         {
             mAlpha -= Time.deltaTime * timeSpeed;
             text.color = new Color(text.color.r, text.color.g, text.color.b, mAlpha);
-            Debug.Log(mAlpha);
             yield return null;
         }
     }

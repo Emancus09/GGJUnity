@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class DoorManager : MonoBehaviour
 {
-    public string nextScene;
-
     int mNumRegisteredOrbs = 0;
     int mNumOrbsTouched = 0;
 
@@ -28,6 +26,14 @@ public class DoorManager : MonoBehaviour
         }
     }
 
+    public void Update()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
     public void registerOrb()
     {
         mNumRegisteredOrbs++;
@@ -43,16 +49,13 @@ public class DoorManager : MonoBehaviour
         }
     }
 
-    [Header("Components")]
-    public SpriteRenderer spriteRenderer;
-
     void OnTriggerEnter2D(Collider2D other)
     {
         Player player = other.gameObject.GetComponent<Player>();
         Debug.Log("can't proceed - door is locked");
         if (player != null && !isLocked)
         {
-            SceneManager.LoadScene(nextScene);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

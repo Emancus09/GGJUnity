@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -5489517133611239331, guid: 51e5071df5cd5384aa1d3ef6e2d7f3e9,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -99,6 +99,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 62ae6f09b459e2a4498becf3047d0499, type: 2}
   initialAbility: 3
   spriteRenderer: {fileID: 242719596776638188}
+  doorManager: {fileID: 0}
 --- !u!58 &9087899838432166065
 CircleCollider2D:
   m_ObjectHideFlags: 0
