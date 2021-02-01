@@ -34,6 +34,10 @@ public class InputManager : MonoBehaviour
         SetActiveAbility(Ability.Jump, Input.GetButtonDown("Jump"));
         SetActiveAbility(Ability.Left, Input.GetButton("Left"));
         SetActiveAbility(Ability.Right, Input.GetButton("Right"));
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
     }
 
     public bool[] getAllAbilitiesAvail(){
