@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: OrbData
   m_EditorClassIdentifier: Assembly-CSharp::OrbData
   orbSprites:
-  - {fileID: 3740191742173349062, guid: 51e5071df5cd5384aa1d3ef6e2d7f3e9, type: 3}
-  - {fileID: -3647626148071368089, guid: 51e5071df5cd5384aa1d3ef6e2d7f3e9, type: 3}
+  - {fileID: 8784019252837020500, guid: 51e5071df5cd5384aa1d3ef6e2d7f3e9, type: 3}
+  - {fileID: 299985813260920670, guid: 51e5071df5cd5384aa1d3ef6e2d7f3e9, type: 3}
+  - {fileID: 6310945038506529798, guid: 51e5071df5cd5384aa1d3ef6e2d7f3e9, type: 3}
   - {fileID: -5692808054993777421, guid: 51e5071df5cd5384aa1d3ef6e2d7f3e9, type: 3}
-  - {fileID: -5489517133611239331, guid: 51e5071df5cd5384aa1d3ef6e2d7f3e9, type: 3}

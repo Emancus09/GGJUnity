@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 242719596776638188}
   - component: {fileID: 242719596776638189}
   - component: {fileID: 9087899838432166065}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: Orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 242719596776638178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -5489517133611239331, guid: 51e5071df5cd5384aa1d3ef6e2d7f3e9,
+  m_Sprite: {fileID: -5692808054993777421, guid: 51e5071df5cd5384aa1d3ef6e2d7f3e9,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 62ae6f09b459e2a4498becf3047d0499, type: 2}
   initialAbility: 3
+  door: {fileID: 0}
   spriteRenderer: {fileID: 242719596776638188}
-  doorManager: {fileID: 0}
 --- !u!58 &9087899838432166065
 CircleCollider2D:
   m_ObjectHideFlags: 0

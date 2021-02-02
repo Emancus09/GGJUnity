@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
     public Sprite[] colorArrows;
     public Image[] currentArrows;
 
-    public InputManager mInputMgr;
+    public InputManager inputManager;
 
     // Update is called once per frame
     void Update()
@@ -18,7 +18,7 @@ public class UIManager : MonoBehaviour
     }
 
     void setAbilities(){
-        bool[] abilities = mInputMgr.getAllAbilitiesAvail();
+        bool[] abilities = inputManager.getAllAbilitiesAvail();
         for (int i = 0; i < currentArrows.Length; i++){
             if (abilities[i]){
                 currentArrows[i].sprite = 
